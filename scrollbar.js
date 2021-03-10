@@ -1,5 +1,5 @@
 import { fromEvent } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 const scroll$ = fromEvent(document, 'scroll');
 const progressBarElement = document.querySelector('.progress-bar');
@@ -9,9 +9,12 @@ function calculateScrollPercentage(element) {
   return (scrollTop / (scrollHeight - clientHeight)) * 100;
 }
 
-scroll$.pipe(
-    map(({ target }) =>
-        calculateScrollPercentage(target.scrollingElement)),
-).subscribe((scrollPercentage) => {
+const progress$ = scroll$
+    .pipe(
+        map(({ target }) =>
+            calculateScrollPercentage(target.scrollingElement)),
+    );
+
+progress$.subscribe((scrollPercentage) => {
   progressBarElement.style.width = `${ scrollPercentage }%`;
 });
