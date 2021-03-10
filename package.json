@@ -1,0 +1,31 @@
+{
+  "name": "learn-rxjs",
+  "version": "1.0.0",
+  "description": "RxJS Ultimate Courses learning files",
+  "main": "example.js",
+  "dependencies": {
+    "rxjs": "^6.6.6"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorHFLopes/learn-rxjs.git"
+  },
+  "keywords": [
+    "learn",
+    "rxjs"
+  ],
+  "author": "Vitor Hugo F. Lopes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VitorHFLopes/learn-rxjs/issues"
+  },
+  "homepage": "https://github.com/VitorHFLopes/learn-rxjs#readme"
+}
